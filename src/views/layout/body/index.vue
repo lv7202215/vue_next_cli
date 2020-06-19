@@ -1,17 +1,13 @@
 <template>
-  <div class="about">
-    this is about page
-  </div>
+  <section class="main">
+    <router-view></router-view>
+  </section>
 </template>
 
 <script lang="ts">
-  import {ref} from "vue"
-
   export default {
     setup() {
-      return {
-        tempValue: ref(0)
-      }
+      return {}
     }
   }
 </script>

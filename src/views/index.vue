@@ -3,21 +3,18 @@
     <!--头部导航-->
     <Header/>
     <!--内容主体-->
-    <router-view></router-view>
-    <!--底部-->
-    <footer></footer>
+    <Body/>
   </div>
 </template>
 
 <script lang="ts">
-  import {ref} from "vue"
-  import Header from "@/views/header/index.vue"
+  // import {ref} from "vue"
+  import Header from "@/views/layout/header/index.vue"
+  import Body from "@/views/layout/body/index.vue"
   export default {
-    components: {Header},
+    components: {Header,Body},
     setup() {
-      return {
-        tempValue: ref(0)
-      }
+      return {}
     }
   }
 </script>
