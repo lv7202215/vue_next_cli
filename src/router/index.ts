@@ -1,17 +1,17 @@
 import { RouteRecordRaw, createRouter, createWebHashHistory } from 'vue-router';
-import Home from '../views/Home.vue'
+import HOME_ROUTER from "@/router/modules/home"; // 首页
+import ABOUT_ROUTER from "@/router/modules/about"; // ABOUT
 
 const routes: Array<RouteRecordRaw> = [
-{
-  path: '/',
-  name: 'Home',
-  component: Home
-},
-{
-  path: '/about',
-  name: 'About',
-  component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-}
+  {
+    path: '/',
+    name: 'Index',
+    component: () => import(/* webpackChunkName: "home" */ "@/views/index.vue"),
+    children:{
+      ...HOME_ROUTER,
+      ...ABOUT_ROUTER
+    }
+  }
 ]
 
 const router = createRouter({

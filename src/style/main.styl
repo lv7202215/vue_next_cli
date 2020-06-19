@@ -1,0 +1,16 @@
+/* 全局变量 */
+$main-font = 14px
+$main-light = #61dafb
+$main-dark = #20232a
+$main-padding = 15px
+$main-margin = 15px
+$main-radius = 5px
+
+/* mixins */
+border-radius(n)
+  -webkit-border-radius n
+  -moz-border-radius n
+  border-radius n
+
+box-shadow(n=3px,color=$main-dark)
+ box-shadow n n 2n color
